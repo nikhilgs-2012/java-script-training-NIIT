@@ -1,0 +1,88 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<table id="example" class="display" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>Date Renewal</th>
+      <th>Reminder Date</th>
+      <th>Reminder Status</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <th>Date Renewal</th>
+      <th>Reminder Date</th>
+      <th>Reminder Status</th>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <tr class='clickable-row' data-toggle="modal" data-target="#editModal" style="cursor:pointer">
+      <td></td>
+      <td></td>
+      <td>Active</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<!-- Edit  Job modal -->
+
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"> <a href="#" data-dismiss="modal"> <img src="images/arrow-back-512.png"  width="30px" height="30px"> <small>Back</small></a> <span id="myModalLabel" style="margin-left:20px;"><font size="+2"><b>Add to problem list</b></font></span> </div>
+      <div class="modal-body">
+        <form class="form-horizontal" method="post" action="InsertPassportReminderSrvlt?idEmployee=1" >
+          <fieldset id="modal_form">
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Date Renewal Due</label>
+              <div class="col-md-6">
+                <input name="dateRenewalDue" type="date"  class="form-control input-md" >
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Reminder Date</label>
+              <div class="col-md-6">
+                <input  name="reminderDate" type="date" class="form-control input-md"> 
+              </div>
+
+            </div>
+
+
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+                </fieldset>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- /Edit Job modal -->
+ Run code snippetHide results
+Full page
+shareimprove this answer
+edited Feb 18 '15 at 10:36
+answered Feb 18 '15 at 10:21
+
+DavidG
+33.2k74373
+      
+hmm..It didn't work in mine.. – PeakGen Feb 18 '15 at 10:24
+      
+Is the Bootstrap js file added after the jQuery js file? – DavidG Feb 18 '15 at 10:26
+      
+OK, Let me update the question with full code. Please note it contains some JSTL Code as well, as this is a

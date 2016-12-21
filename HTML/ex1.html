@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+        .parent{
+        	position: relative;
+        }
+    	
+    	.div_hide{
+    		height: 100px;
+    		width: 100px;
+    		position: absolute;
+    		top:40%;
+    		left: 40%;
+    		background-color: #fff;
+    		opacity: 0.7;
+    	}
+    </style>
+
+    <script type="text/javascript">
+    
+     function show_doc(event){
+
+        event.currentTarget.children[1].style.display="block";
+    	console.log(event);
+    	}
+
+    function hide_doc(event){
+        event.currentTarget.children[1].style.display="none";
+    	}
+     
+
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Hello, world!</h1>
+    
+    <div class="row">
+    <div class="col-md-12">
+	    <div class="col-md-4 parent" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	      <img src="images/movie-snip1.jpg" width="100%" height="170px">
+	       <div class="div_hide" style="display: none;">Teet</div>	  
+	    </div>
+	    
+	    
+	    <div class="col-md-4 parent" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	    	<img src="images/movie-snip2.jpg" width="100%" height="170px">
+	    	<div class="div_hide" style="display: none;">Teet</div>
+	    </div>
+	    
+	    <div class="col-md-4" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	    	<img src="images/movie-snip3.jpg" width="100%" height="170px">
+	    	<div class="div_hide" style="display: none;">Teet</div>	
+	    </div>
+    </div>
+    <div class="col-md-12">
+    &nbsp;
+    </div>
+    <div class="col-md-12">
+    	<div class="col-md-4" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	      <img src="images/movie-snip4.jpg" width="100%" height="170px">
+	      <div class="div_hide" style="display: none;">Teet</div>	
+	    </div>
+	    
+	    <div class="col-md-4" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	    	<img src="images/movie-snip5.jpg" width="100%" height="170px">
+	    	<div class="div_hide" style="display: none;">Teet</div>	
+	    </div>
+	    
+	    <div class="col-md-4" onmouseover="show_doc(event)" onmouseout="hide_doc(event)">
+	    	<img src="images/movie-snip6.jpg" width="100%" height="170px">
+	    	<div class="div_hide" style="display: none;">Teet</div>	
+	    </div>
+
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+	    <div class="col-md-6">
+	    	<div class="col-md-12 heading">
+	    		<h3>Show of the day</h3>
+	    	</div>
+	    	<div class="col-md-12">
+	    		<img src="images/movie-snip3.jpg" width="100%" height="150px">
+	    	</div>
+	    	<div class="col-md-12">
+	    		<ul class="list-group">
+	    		  <li class="list-group-item"><strong>Troy</strong></li>	
+				  <li class="list-group-item"><strong>Show Time : </strong> 12:30, 3:30, 6:30, 9:30</li>
+				  <li class="list-group-item"><strong>Cinema:</strong> Manorma</li>
+				  <li class="list-group-item"><strong>Audi: 1</strong></li>
+				  
+				</ul>
+	    	</div>
+	    </div>
+	    
+	    <div class="col-md-6">
+	    		
+	    	<div class="col-md-12" style="margin-top: 60px">
+	    		<img src="images/download.jpg" width="100%">
+	    	</div>
+	    </div>
+	</div>
+    </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
