@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html ng-app="">
+<head>
+<title>Angular Training 1</title>
+<style type="text/css">
+  .red {color:red;}
+  .blue {color:blue;}
+
+  [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak {
+    display: none !important;
+  }
+
+</style>
+<script src="angular.js"></script>
+
+</head>
+
+<body ng-init="data={name1:'nikhil',isVisible:false,loggedIn:false,status:'red'}">
+    {{2+2}}
+    <div ng-cloak>
+      <div ng-switch on="data.loggedIn">
+         <div ng-switch-when="true">welcome {{data.name1}}</div>
+         <div ng-switch-default> login </div>
+      </div>
+      <div ng-show="data.isVisible">
+          Name : <input type="text" name="name" ng-model="data.name1"/> 
+          {{data.name1}}
+      </div>
+    </div>
+  
+</body>
+
+</html>

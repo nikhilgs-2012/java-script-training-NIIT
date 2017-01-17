@@ -1,0 +1,39 @@
+<DOCTYPE html>
+<html ng-app="">
+<head>
+<title>Angular Training 1</title>
+<style type="text/css">
+  /*.red {color:red;}
+  .blue {color:blue;}
+
+  [ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak {
+    display: none !important;
+  }
+*/
+</style>
+<script src="angular.js"></script>
+
+</head>
+
+<body ng-init="people=[
+          {name:'dinesh',city:'vadodara'},
+          {name:'manish',city:'delhi'},
+          {name:'vishal',city:'vadodara'}]">
+    {{2+2}}
+    <div>
+          <ul>
+            <li ng-repeat="person in people">{{person.name}} {{person.city}} </li>
+          </ul>    
+    </div>
+    <div>
+        <table border="1" cellpadding="0" cellspacing="0">
+            <tr ng-repeat="person in people">
+              <td>{{person.name}}</td>
+              <td>{{person.city}}</td>
+            </tr>
+        </table>
+    </div>
+  
+</body>
+
+</html>

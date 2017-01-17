@@ -1,0 +1,23 @@
+<DOCTYPE html>
+<html ng-app="">
+<head>
+<title>Angular Training</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+</head>
+
+<body ng-init="name1='this is test name'">
+  {{2+2}}
+  <div ng-hide="isHidden">
+    <input type="text" name="text" ng-model="name1"> {{name1}}
+  </div>
+  <div ng-hide="isHidden">
+    <input type="text" name="text" ng-model="name"> <span ng-bind="name"></span></div>
+  <div>
+     Hide : <input type="checkbox" name="check" ng-model="isHidden"/>
+  </div>
+  <div>
+   <button ng-click="name1='this is new name'">Change input text</button>
+  </div>
+</body>
+
+</html>
