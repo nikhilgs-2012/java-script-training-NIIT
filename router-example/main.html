@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+    
+    ul {list-style-type: none;}
+    ul li {display: inline-block;}
+
+</style>
+</head>
+<body ng-app="myApp">
+<ul>
+<li><a href="#/">Main</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<p>Click on the links.</p>
+
+<p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
+
+<div ng-view></div>
+
+<script>
+
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.html",
+    })
+    .when("/about", {
+        templateUrl : "about.html",
+        controller : "aboutCtrl"
+    })
+    .when("/contact", {
+        templateUrl : "contact.html",
+        controller : "contactCtrl"
+    })
+     otherwise({
+        redirectTo: 'main.html'
+      });
+    ;
+});
+
+app.controller("aboutCtrl", function ($scope) {
+    $scope.msg = "This is page of About Us";
+});
+app.controller("contactCtrl", function ($scope) {
+    $scope.msg = "This is contact page";
+});
+
+</script>
+<script src="js/angular.js"></script>
+<script src="js/angular-route.js"></script>
+
+</body>
+</html>
