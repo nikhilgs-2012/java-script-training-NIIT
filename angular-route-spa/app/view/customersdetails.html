@@ -1,0 +1,25 @@
+<div>
+  Filter : <input type="text" name="basic-filter" ng-model="customerFilter.name">
+</div>
+<br/>
+<div>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <th ng-click="doSort('name')">Name</th>
+      <th ng-click="doSort('city')">City</th>
+      <th ng-click="doSort('joinDate')">Join Date</th>
+      <th>Amount</th>
+      <th>&nbsp;</th>
+    </tr>
+    <tr ng-repeat="customer in customers | filter:customerFilter | orderBy:sortBy:reverse">
+      <td>{{customer.name | uppercase}}</td>
+      <td>{{customer.city | lowercase}}</td>
+      <td>{{customer.joinDate |date}}</td>
+      <td>{{customer.amount| currency:'Rs'}}</td>
+      <td><a href="#/orders/{{customer.id}}">View Orders</a></td>
+    </tr>
+
+</table>
+
+</div>
+<div> <span>Total customer : {{customers.length}}</span></div>
