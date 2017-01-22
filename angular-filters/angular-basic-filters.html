@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+<title>Angular Training 1</title>
+
+</head>
+
+<body>
+  
+  <div ng-controller="CustomersController">
+       
+        <div>
+          Filter : <input type="text" name="basic-filter" ng-model="customerFilter.name">
+        </div>
+        <br/>
+        <div>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+              <th ng-click="doSort('name')">Name</th>
+              <th ng-click="doSort('city')">City</th>
+              <th ng-click="doSort('joinDate')">Join Date</th>
+              <th>Amount</th>
+            </tr>
+            <tr ng-repeat="customer in customers | filter:customerFilter | orderBy:sortBy:reverse">
+              <td>{{customer.name | uppercase}}</td>
+              <td>{{customer.city | lowercase}}</td>
+              <td>{{customer.joinDate |date}}</td>
+              <td>{{customer.amount| currency:'Rs'}}</td>
+            </tr>
+        </table>
+      </div>
+  </div>
+<script src="angular.js"></script>
+<script src="app/controllers/customersController.js"></script>
+
+    
+
+</body>
+
+</html>
